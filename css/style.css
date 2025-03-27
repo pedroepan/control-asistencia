@@ -1,0 +1,208 @@
+:root {
+    --azul: #30669A;
+    --negro: #000000;
+    --gris_oscuro: #1e1e1e;  
+    --fuentePrincipal: 'Roboto', sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+
+
+.header_blanco {
+    height: 10vh;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 1px 10px gray;
+}
+
+.logo {
+    width: 15rem;
+    height: 5rem;
+}
+
+.boton_acceder {
+    font-size: 14px;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 35px;
+    background-color: var(--azul);
+    border-radius: 4px;
+}
+
+.principal {
+    height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajita { 
+    height: 40rem;
+    width: 40rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 10px gray;
+}
+
+
+
+
+.reloj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 70px;
+    color: #000;
+    font-size: 6rem;
+    font-weight: bold;
+    margin-top: .5rem;
+}
+
+hr {
+    margin-top: -5px;
+    border: 1px solid #2c2c2c;
+    width: 60%;
+    margin-bottom: 0.5rem;
+}
+
+.boton {
+    font-size: 14px;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 35px;
+    background-color: var(--azul);
+    border-radius: 4px;
+    margin-top: 1.7rem;
+}
+
+.cajita.submits {
+    display: flex;
+    flex-direction: row;
+}
+
+.cajita-submits_submit {
+    width: 120px;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.input {
+    height: 40px;
+    width: 200px;
+    font-size: 1.5rem;
+    font-weight: medium;
+    box-shadow: inset 0px 0px 3px gray;
+    border: none;
+    padding-left: 1rem;
+    border-radius: 2px;
+    margin-top: 1rem;
+}
+
+.enunciado-asistencia {
+    text-align: center;
+    font-weight: 300;
+    font-size: 48px;
+    margin-top: .5rem;
+    margin-bottom: 0rem;
+}
+
+.fecha {
+    font-size: 15px;
+}
+
+.boton:hover {
+    background-color: #254c70;
+    cursor: pointer;
+}
+
+.boton_acceder:hover {
+    background-color: #254c70;
+    cursor: pointer;
+}
+
+
+
+/*Login*/
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5rem;
+}
+
+.formulario_campo {
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.formulario_campo label {
+    font-size: 1.7rem;
+    font-weight: bold;
+
+}
+
+.formulario_campo input {
+    height: 35px;
+    width: 300px;
+    font-size: 1.5rem;
+    font-weight: medium;
+    box-shadow: inset 0px 0px 3px gray;
+    border: none;
+    padding-left: 1rem;
+    border-radius: 2px;
+    margin-top: .5rem;
+
+}
+
+.formulario_campo-submit {
+    font-size: 14px;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 35px;
+    background-color: var(--azul);
+    border-radius: 4px;
+    margin-top: 1.7rem;
+}
+
+.formulario_campo-submit:hover {
+    background-color: #254c70;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    min-height: 90vh;
+}

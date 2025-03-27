@@ -1,0 +1,41 @@
+:root {
+    --azul: #30669A;
+    --negro: #000000;
+    --gris_oscuro: #1e1e1e;  
+    --blanco: #ffffff;
+    --fuentePrincipal: 'Roboto', sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+.footer {
+    height: 5vh;
+    background-color: var(--azul);
+    border-top: solid 1px gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    padding: 0;
+}
+
+.footer p {
+    font-weight: light;
+    font-size: 1.3rem;
+    margin: 0;
+}

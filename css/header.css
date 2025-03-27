@@ -1,0 +1,75 @@
+:root {
+    --azul: #30669A;
+    --negro: #000000;
+    --gris_oscuro: #1e1e1e;  
+    --blanco: #ffffff;
+    --fuentePrincipal: 'Roboto', sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+.header_azul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--azul);
+    height: 10vh;
+    border-bottom: solid 1px gray;
+}
+.header_azul img {
+    height: 50px;
+}
+.header_azul .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header_azul button {
+    font-size: 14px;
+    color: var(--gris_oscuro);
+    border: none;
+    width: 150px;
+    height: 35px;
+    background-color: var(--blanco);
+    border-radius: 4px;
+}
+.header_azul button:hover {
+    background-color: #d9d9d9;
+    color: var(--gris_oscuro);
+}
+
+.header_azul-usuario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.header_azul-usuario-span {
+    font-size: 1.7rem;
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.header_azul-usuario-icon {
+    font-size: 2.5rem;
+    color: var(--blanco);
+    margin-right: .5rem;
+}

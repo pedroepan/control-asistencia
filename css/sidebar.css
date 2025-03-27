@@ -1,0 +1,78 @@
+:root {
+    --azul: #30669A;
+    --negro: #000000;
+    --gris_oscuro: #1e1e1e;  
+    --blanco: #ffffff;
+    --fuentePrincipal: 'Roboto', sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+.sidebar {
+    width: 200px;
+    background-color: var(--azul);
+    color: #ecf0f1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li a {
+    color: #ecf0f1;
+    font-size: 14px;
+    text-decoration: none;
+    display: block; /* Asegura que el enlace ocupe todo el ancho */
+    padding: 15px; /* Mueve el padding al <a> */
+    width: 100%; /* Asegura que el enlace ocupe todo el ancho del <li> */
+    display: flex;
+    flex-direction: row;
+}
+.sidebar-menu li:hover a {
+    background-color: #34495e; /* Resalta todo el bloque al hacer hover */
+    cursor: pointer;
+}
+.sidebar-footer {
+    font-size: 14px;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #7f8c8d;
+}
+.sidebar-footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+.sidebar-footer a:hover {
+    text-decoration: underline;
+}
+
+
+.sidebar-menu-item-icon {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    margin-right: .5rem;
+}
