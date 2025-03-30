@@ -1,0 +1,70 @@
+:root {
+    --azul: #30669A;
+    --negro: #000000;
+    --gris_oscuro: #1e1e1e;  
+    --blanco: #ffffff;
+    --fuentePrincipal: 'Roboto', sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+.cajita-crear-usuario {
+    height: 60rem;
+    width: 40rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 10px gray;
+    padding-bottom: 1.5rem;
+}
+
+.formulario_campo-rol {
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 100%;
+}
+
+.formulario_campo select {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cambia el borde al hacer focus */
+.formulario_campo select:focus {
+    border-color: #30669A; /* Color del borde al hacer focus */
+    box-shadow: 0 0 5px rgba(48, 102, 154, 0.5); /* Efecto de sombra */
+}
+
+/* Opcional: Cambia el cursor al pasar sobre el select */
+.formulario_campo select:hover {
+    cursor: pointer;
+}

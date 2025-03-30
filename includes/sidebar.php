@@ -1,6 +1,6 @@
 <div class="sidebar">
     <ul class="sidebar-menu">
-        <li class="sidebar-menu-item">
+        <li class="sidebar-menu-item sidebar-menu_dashboard">
             <a href="dashboard.php">
                 <div class="sidebar-menu-item-icon"><i class="fa-solid fa-dashboard"></i></div>
                 <div class="sidebar-menu-item-spam"><span>Dashboard</span></div>
@@ -38,7 +38,7 @@
         </li>
     </ul>
     <div class="sidebar-footer">
-        <a href="logout.php"><span>Cerrar Sesión</span></a>
+        <a href="../config/controlador_logout.php"><span>Cerrar Sesión</span></a>
     </div>
 </div>
 

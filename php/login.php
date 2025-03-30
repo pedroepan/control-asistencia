@@ -17,16 +17,18 @@
     <main class="principal">
         <div class="cajita">
         <h1 class="enunciado-asistencia">Control de<br>asistencia</h1>
-            <form class="formulario" action="Data.php">
+        <?php include '../config/bd.php'; ?>
+        <?php include '../config/controlador_login.php'; ?>
+            <form class="formulario" method="post">
                 <div class="formulario_campo formulario_usuario">
                     <label for="username">Correo Electrónico</label>
-                    <input type="text" name="username" id="username" placeholder="Ingrese su correo electrónico" required>
+                    <input type="text" name="correo" id="username" placeholder="Ingrese su correo electrónico" required>
                 </div>
                 <div class="formulario_campo formulario_password">
                     <label for="password">Contraseña</label>
                     <input type="password" name="password" placeholder="Ingrese su contraseña" id="password" required>
                 </div>
-                <input class="formulario_campo-submit" type="submit" value="Iniciar Sesión">
+                <input class="formulario_campo-submit" type="submit" name="btniniciar_sesion" value="Iniciar Sesión">
             </form>
         </div>
         
