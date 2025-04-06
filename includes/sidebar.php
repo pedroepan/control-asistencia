@@ -19,7 +19,7 @@
                 <div class="sidebar-menu-item-spam"><span>Reporte</span></div>
             </a>
         </li>
-        <li class="sidebar-menu-item">
+        <li class="sidebar-menu-item sidebar-menu_profesores">
             <a href="profesores.php">
                 <div class="sidebar-menu-item-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
                 <div class="sidebar-menu-item-spam"><span>Profesores</span></div>

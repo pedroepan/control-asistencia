@@ -25,3 +25,17 @@ html {
 .sidebar-menu_control {
     background-color: #34495e;
 }
+
+.main-contenido__control {
+    padding: 2rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-contenido__control h4 {
+    font-size: 25px;
+    background-color: rebeccapurple;
+    text-align: center;
+}

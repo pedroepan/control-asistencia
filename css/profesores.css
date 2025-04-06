@@ -1,0 +1,142 @@
+:root {
+    --azul: #30669A;
+    --negro: #000000;
+    --gris_oscuro: #1e1e1e;  
+    --blanco: #ffffff;
+    --fuentePrincipal: 'Roboto', sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+.sidebar-menu_profesores {
+    background-color: #34495e;
+}
+
+.main-contenido__profesores {
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.main-contenido__profesores h4 {
+    font-size: 25px;
+}
+
+.container-datatable {
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Alinear el contenido dentro de los th y td al centro */
+.container-datatable th,
+.container-datatable td {
+    text-align: center; /* Alinear horizontalmente al centro */
+    vertical-align: middle; /* Centrar verticalmente */
+    padding: 10px; /* Asegurar el mismo relleno */
+}
+
+#th_codigo {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_nombre {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_apellido {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_correo {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_cedula {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_telefono {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_natalicio {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_botones {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+#td_codigo {
+    text-align: center;
+}
+#td_nombre {
+    text-align: center;
+}
+#td_apellido {
+    text-align: center;
+}
+#td_correo {
+    text-align: center;
+}
+#td_cedula {
+    text-align: center;
+}
+#td_telefono {
+    text-align: center;
+}
+#td_natalicio {
+    text-align: center;
+}
+
+
+/* Estilo para los botones dentro de la tabla */
+.container-datatable button {
+    font-size: 12px; /* Aumentar el tamaño de la fuente */
+    padding: 5px 15px; /* Aumentar el relleno del botón */
+    border-radius: 5px; /* Redondear los bordes */
+    margin: 5px; /* Espaciado entre botones */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+}
+
+/* Opcional: Estilo para botones específicos */
+.container-datatable .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.container-datatable .btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
