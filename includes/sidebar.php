@@ -25,7 +25,8 @@
                 <div class="sidebar-menu-item-spam"><span>Profesores</span></div>
             </a>
         </li>
-        <li class="sidebar-menu-item">
+        <li class="sidebar-menu-item
+        sidebar-menu_unidadesCurriculares">
             <a href="unidades_curriculares.php">
                 <div class="sidebar-menu-item-icon"><i class="fa-solid fa-book"></i></div>
                 <div class="sidebar-menu-item-spam"><span>Unidades curriculares</span></div>
