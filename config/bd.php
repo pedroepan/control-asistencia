@@ -12,7 +12,7 @@ if ($conexion->connect_error) {
  // echo "Connected successfully";
 }
 
-$conexion->set_charset("utf8mb4"); // Set the character set to utf8mb4
+$conexion->set_charset("utf8mb4");
 
 
 

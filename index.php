@@ -12,7 +12,7 @@
 <body>
 <header class="header_blanco">
         <img class="logo" src="assets\images\logo-2.png" alt="logo-unimar">
-        <a href="php\login.php"><button class="boton_acceder">Iniciar Sesión</button></a>
+        <a href="php/dashboard.php"><button class="boton_acceder">Volver</button></a>
     </header>
     <main class="principal">
         <div class="cajita">

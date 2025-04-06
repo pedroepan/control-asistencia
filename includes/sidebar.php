@@ -6,7 +6,8 @@
                 <div class="sidebar-menu-item-spam"><span>Dashboard</span></div>
             </a>
         </li>
-        <li class="sidebar-menu-item">
+        <li class="sidebar-menu-item
+        sidebar-menu_control">
             <a href="control.php">
                 <div class="sidebar-menu-item-icon"><i class="fa-solid fa-cog"></i></div>
                 <div class="sidebar-menu-item-spam"><span>Control</span></div>

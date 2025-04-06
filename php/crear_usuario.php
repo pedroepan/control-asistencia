@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
 <header class="header_blanco">
@@ -45,14 +48,15 @@
             <div class="formulario_campo formulario_campo-rol">
                 <label for="rol">Rol</label>
                 <select name="rol" id="rol" placeholder="Seleccionar rol" required>
-                    <option value="admin">Jefe</option>
-                    <option value="user">Administrador</option>
-                    <option value="user">Becario</option>
+                    <option value="jefe">Jefe</option>
+                    <option value="admin">Administrador</option>
+                    <option value="becario">Becario</option>
                 </select>
             </div>
-            <input name="btncrear_usuario" class="formulario_campo-submit" type="submit" value="Crear Usuario">
+            <input id="btncrear_usuario" name="btncrear_usuario" class="formulario_campo-submit" type="submit" value="Crear Usuario">
         </form>
     </div>
 </main>
+<script src="../js/button.js"></script>
 </body>
 </html>

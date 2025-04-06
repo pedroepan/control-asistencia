@@ -16,13 +16,8 @@ if (!empty($_POST["btncrear_usuario"])) {
         } else {
             // Insertar el nuevo usuario si no hay duplicados
             $sql = $conexion->query("INSERT INTO usuarios (nombre, apellido, correo, cedula, contra, rol) VALUES ('$nombre', '$apellido', '$correo', '$cedula', '$contrasena', '$rol')");
-            if ($sql == 1) {
-                echo 'Usuario creado correctamente';
-                header("Location: ../php/dashboard.php");
-                exit;
-            } else {
-                echo 'Error al crear el usuario: ' . $conexion->error;
-            }
+            echo 'Usuario creado correctamente';
+            
         }
     }
 }
