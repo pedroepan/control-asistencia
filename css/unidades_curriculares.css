@@ -25,3 +25,81 @@ html {
 .sidebar-menu_unidadesCurriculares {
     background-color: #34495e;
 }
+
+.main-contenido__unidades-curriculares {
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+}
+
+.main-contenido__unidades-curriculares h4 {
+    font-size: 25px;
+}
+
+.container-datatable {
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+#th_codigo {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_nombre {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_seccion {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_dia {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_inicio {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_fin {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_aula {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+#th_botones {
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.container-datatable button {
+    font-size: 12px; /* Aumentar el tamaño de la fuente */
+    padding: 5px 15px; /* Aumentar el relleno del botón */
+    border-radius: 5px; /* Redondear los bordes */
+    margin: 5px; /* Espaciado entre botones */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+}
+
+
+/* Alinear el contenido dentro de los th y td al centro */
+.container-datatable th,
+.container-datatable td {
+    text-align: center; /* Alinear horizontalmente al centro */
+    vertical-align: middle; /* Centrar verticalmente */
+    padding: 10px; /* Asegurar el mismo relleno */
+}

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profresores</title>
 
+    <link rel="icon" href="../assets/images/logounimar.png" type="image/png">
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/header.css">
@@ -40,6 +42,12 @@
         <section class="main-contenido__profesores">
             <h4>Profesores</h4>
 
+            <!-- Botón "Nuevo Profesor" visible solo para admin o jefe -->
+            <?php if ($userRol === 'admin' || $userRol === 'jefe'): ?>
+                <div class="">
+                    <button class="btn-nuevoProfesor" onclick="window.location.href='crear_profesor.php'">Nuevo Profesor</button>
+                </div>
+            <?php endif; ?>
             <!-- Setencia SQL -->
             <?php
             include_once '../config/bd.php';

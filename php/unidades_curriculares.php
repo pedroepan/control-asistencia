@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unidades curriculares</title>
+
+    <link rel="icon" href="../assets/images/logounimar.png" type="image/png">
+    
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/header.css">
@@ -38,13 +41,13 @@
             <?php include '../includes/sidebar.php'; ?>
         </section>
         <section class="main-contenido__unidades-curriculares">
-            <h4>Profesores</h4>
+            <h4>Unidades curriculares</h4>
 
             <!-- Setencia SQL -->
             <?php
             include_once '../config/bd.php';
 
-            $sql = $conexion->query("SELECT codigo, nombre, seccion, dia, hora_inicio, hora_fin, aula FROM materias");
+            $sql = $conexion->query("SELECT id, codigo, nombre, seccion, dia, hora_inicio, hora_fin, aula FROM materias");
             ?>
 
             <div class="container-datatable container w-100">
@@ -53,11 +56,11 @@
                         <tr>
                             <th id="th_codigo" scope="col">CÓDIGO</th>
                             <th id="th_nombre" scope="col">NOMBRE</th>
-                            <th id="th_apellido" scope="col">SECCIÓN</th>
-                            <th id="th_correo" class="th_encabezado" scope="col">DÍA</th>
-                            <th id="th_cedula" scope="col">INICIO</th>
-                            <th id="th_telefono" scope="col">FIN</th>
-                            <th id="th_natalicio" scope="col">AULA</th>
+                            <th id="th_seccion" scope="col">SECCIÓN</th>
+                            <th id="th_dia" class="th_encabezado" scope="col">DÍA</th>
+                            <th id="th_inicio" scope="col">INICIO</th>
+                            <th id="th_fin" scope="col">FIN</th>
+                            <th id="th_aula" scope="col">AULA</th>
                             <th id="th_botones"></th>
                         </tr>
                     </thead>
@@ -72,7 +75,17 @@
                                 <td id="td_telefono"><?= $datos->hora_fin ?></td>
                                 <td id="td_natalicio"><?= $datos->aula ?></td>
                                 <td>
-                                    <button class="btn btn-primary btn-sm">Editar horario</button>
+                                    <button
+                                        class="btn btn-primary btn-sm btn-editar-horario"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#editarHorarioModal"
+                                        data-codigo="<?= $datos->codigo ?>"
+                                        data-dia="<?= $datos->dia ?>"
+                                        data-hora_inicio="<?= $datos->hora_inicio ?>"
+                                        data-hora_fin="<?= $datos->hora_fin ?>"
+                                        data-aula="<?= $datos->aula ?>">
+                                        Editar horario
+                                    </button>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -88,6 +101,63 @@
     <footer>
         <?php include '../includes/footer.php'; ?>
     </footer>
+    <!-- Modal para editar horario -->
+    <div class="modal fade" id="editarHorarioModal" tabindex="-1" aria-labelledby="editarHorarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg"> <!-- Cambiar a modal-lg para hacerlo más grande -->
+            <div class="modal-content">
+                <form id="formEditarHorario" method="post" action="../config/editar_horario.php">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editarHorarioModalLabel">Editar Horario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" name="codigo" id="codigo"> <!-- Campo oculto para el código -->
+                        <div class="mb-3">
+                            <label for="dia" class="form-label">Día</label>
+                            <input type="text" class="form-control" id="dia" name="dia" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="hora_inicio" class="form-label">Hora de Inicio</label>
+                            <input type="time" class="form-control" id="hora_inicio" name="hora_inicio" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="hora_fin" class="form-label">Hora de Fin</label>
+                            <input type="time" class="form-control" id="hora_fin" name="hora_fin" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="aula" class="form-label">Aula</label>
+                            <input type="text" class="form-control" id="aula" name="aula" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const botonesEditar = document.querySelectorAll('.btn-editar-horario');
+        const modalCodigo = document.getElementById('codigo');
+        const modalDia = document.getElementById('dia');
+        const modalHoraInicio = document.getElementById('hora_inicio');
+        const modalHoraFin = document.getElementById('hora_fin');
+        const modalAula = document.getElementById('aula');
+
+        botonesEditar.forEach(boton => {
+            boton.addEventListener('click', () => {
+                modalCodigo.value = boton.getAttribute('data-codigo');
+                modalDia.value = boton.getAttribute('data-dia');
+                modalHoraInicio.value = boton.getAttribute('data-hora_inicio');
+                modalHoraFin.value = boton.getAttribute('data-hora_fin');
+                modalAula.value = boton.getAttribute('data-aula');
+            });
+        });
+    });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../js/sidebar.js"></script>

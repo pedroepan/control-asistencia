@@ -32,7 +32,7 @@ html {
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     
 }
 
@@ -139,4 +139,21 @@ html {
     background-color: #dc3545;
     color: white;
     border: none;
+}
+
+.btn-nuevoProfesor {
+    font-size: 14px;
+    color: var(--gris_oscuro);
+    border: none;
+    width: 150px;
+    height: 35px;
+    background-color: var(--blanco);
+    border-radius: 5px;
+    border: solid 2px var(--gris_oscuro);
+    margin: 1rem 0;
+}
+
+.btn-nuevoProfesor:hover {
+    background-color: #d9d9d9;
+    color: var(--gris_oscuro);
 }
